@@ -53,7 +53,7 @@
     "postbuild": "npm test",
     "build:travis": "ngc",
     "postbuild:travis": "npm run test",
-    "clean": "rimraf -rf ./src/**/*.js && rimraf -rf ./src/**/*.d.ts && rimraf -rf ./compiled",
+    "clean": "rimraf -rf ./src/**/*.js && rimraf -rf ./src/**/*.d.ts && rimraf -rf ./compiled/src && rimraf -rf ./compiled/**/*.d.ts && rimraf -rf ./compiled/**/*.js",
     "precommit": "npm test",
     "commit": "git-cz",
     "coverage": "http-server -c-1 -o -s -p 9875 ./coverage",

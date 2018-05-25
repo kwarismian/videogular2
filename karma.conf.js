@@ -36,7 +36,7 @@ module.exports = function(config) {
             {pattern: 'karma-test-shim.js', included: true, watched: true},
 
             // Our built application code
-            {pattern: 'src/**/*.js', included: false, watched: true},
+            {pattern: 'compiled/src/**/*.js', included: false, watched: true},
 
             // paths loaded via Angular's component compiler
             // (these paths need to be rewritten, see proxies section)
@@ -44,13 +44,13 @@ module.exports = function(config) {
             // {pattern: 'dist/**/*.css', included: false, watched: true},
 
             // paths to support debugging with source maps in dev tools
-            {pattern: 'src/**/*.ts', included: false, watched: false}
+            {pattern: 'compiled/src/**/*.ts', included: false, watched: false}
         ],
 
         // proxied base paths
         proxies: {
             // required for component assests fetched by Angular's compiler
-            '/src/': '/base/src/'
+            '/src/': '/base/compiled/src/'
         },
 
         port: 9876,
@@ -77,7 +77,7 @@ module.exports = function(config) {
         // Source files that you wanna generate coverage for.
         // Do not include tests or libraries (these files will be instrumented by Istanbul)
         preprocessors: {
-            'src/**/!(*spec).js': ['coverage']
+            'compiled/src/**/!(*spec).js': ['coverage']
         },
 
         coverageReporter: {

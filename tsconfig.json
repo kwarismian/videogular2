@@ -8,7 +8,8 @@
         "inlineSourceMap": true,
         "inlineSources": true,
         "declaration": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "outDir": "compiled"
     },
     "exclude": [
         "docs/*",
@@ -16,6 +17,6 @@
         "coverage/*"
     ],
     "angularCompilerOptions": {
-        "genDir": "compiled"
+        "skipTemplateCodegen": true
     }
 }

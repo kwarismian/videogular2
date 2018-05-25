@@ -16,7 +16,7 @@ function isSpecFile(path) {
 }
 
 function isBuiltFile(path) {
-    var builtPath = '/base/src/';
+    var builtPath = '/base/compiled/src/';
     return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
 }
 
@@ -54,7 +54,7 @@ System.config(
             '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
             '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',
 
-            'app': 'base/src'
+            'app': 'base/compiled/src'
         },
         packages: {
             'app': {
